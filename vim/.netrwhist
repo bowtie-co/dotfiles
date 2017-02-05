@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/igolden/apps/meddly/jekyll-start/js'
+let g:netrw_dirhist_2='/Users/igolden/apps/ideas/cmail/lib/cmail'
+let g:netrw_dirhist_3='/Users/igolden/apps/ideas/terminal/js'
+let g:netrw_dirhist_4='/Users/igolden'
+let g:netrw_dirhist_5='/Users/igolden/.weather'
+let g:netrw_dirhist_6='/Users/igolden/apps/meddly/app/MeddlyApp/app/containers/Menu'
+let g:netrw_dirhist_7='/Users/igolden/apps/github/v1_collection_editor/src/layouts/CoreLayout'
+let g:netrw_dirhist_8='/Users/igolden/apps/SeekerLocal/SeekerLocal/app/components/Destinations'
