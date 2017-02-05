@@ -1,4 +1,12 @@
 #!/bin/bash
+#===================================================#
+#= 1. Preflight setup 
+#= 2. Start the install process
+      #- brew
+      #- ruby/js/python
+      #- VM & ansible
+#= 3. Install dev dependencies
+#===================================================#
 
 # Install HomeBrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
