@@ -30,10 +30,10 @@ brew install imagemagick
 brew install ansible
 brew install wget
 brew install redis
-echo "\n \n \n \n \n"
+echo "" && echo "" && echo "" && echo ""
 echo "Installing ruby-2.3.0..... This will take a sec."
 echo "Go play some pong =====> http://www.ponggame.org/pong.swf"
-echo "\n \n \n \n \n"
+echo "" && echo "" && echo "" && echo ""
 ruby-install ruby-2.3.0
 
 # Install Antigen
@@ -51,6 +51,26 @@ echo "***** 1. Go to iTerm > Preferences > Profiles > Text    *****"
 echo "***** 2. Choose  Hack font, set to desired size         *****"
 echo "*************************************************************"
 
+
+echo "Copying .zshrc..."
+cp zshrc ../.zshrc
+echo "Copying .vimrc..."
+cp vimrc ../.vimrc
+echo "Copying .vim/..."
+cp -rf vim ../.vim
+echo "Copying .gitconfig.."
+cp gitconfig ../.gitconfig
+
+
+
+
+#========================================================================================#
+# TO DO LIST
+#========================================================================================#
+# CONFIG 
+# NPM MODULES
+# RUBY MODULES
+# BOWTIE MODULES
 
 
 
