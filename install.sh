@@ -22,11 +22,11 @@ brew install imagemagick
 brew install ansible
 brew install wget
 brew install redis
-
-ruby-install ruby-2.3.0
 echo "\n \n \n \n \n"
 echo "Installing ruby-2.3.0..... This will take a sec."
 echo "Go play some pong =====> http://www.ponggame.org/pong.swf"
+echo "\n \n \n \n \n"
+ruby-install ruby-2.3.0
 
 # Install Antigen
 curl https://cdn.rawgit.com/zsh-users/antigen/v1.2.1/bin/antigen.zsh > antigen.zsh
@@ -42,6 +42,9 @@ echo "*************************************************************"
 echo "***** 1. Go to iTerm > Preferences > Profiles > Text    *****"
 echo "***** 2. Choose  Hack font, set to desired size         *****"
 echo "*************************************************************"
+
+
+
 
 
 
