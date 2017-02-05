@@ -1,17 +1,35 @@
+# Autoload const
 setopt promptsubst
-setopt EXTENDED_GLOB
-autoload -U promptinit
-promptinit
-prompt igolden
+setopt EXTENDED_GLOB                  # for using glob in CLI
+autoload -U compinit
+compinit
 
+# Path support
 export PATH=/opt/local/bin:/opt/local/sbin:$HOME/local/bin:$PATH
 export PATH=$PATH:/usr/local/git/bin/
 export MANPATH=/opt/local/share/man:$MANPATH
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
+export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PKG_CONFIG_PATH="/opt/local/lib/pkgconfig:$PKG_CONFIG_PATH"
-autoload -U compinit
-compinit
+
+# ZSH theme setup (antigen)
+source "$HOME/dotfiles/.antigen/antigen.zsh"
+antigen bundle robbyrussell/oh-my-zsh lib/
+antigen bundle git
+antigen-theme https://gist.github.com/b13f9353014327743137 igolden
+antigen-apply
+
+# Set Default Ruby Version
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby 2.3.0
+
+# Init hub gem
+eval "$(hub alias -s)"
+
+#================================================================#
+#== Aliases -- START
+#================================================================#
 
 # Utilities
 alias ls='ls -G'
@@ -24,38 +42,17 @@ alias vp="vagrant provision"
 alias rn="react-native"
 alias redis_start="redis-server /usr/local/etc/redis.conf"
 alias redis_stop="redis-cli shutdown"
-# md5sum
-alias md5='md5 -r'
-alias md5sum='md5 -r'
-alias rncc='watchman watch-del-all && rm -rf node_modules && npm install && npm start -- --reset-cache'
-
-# Unbreak broken, non-colored terminal
-export TERM='xterm-color'
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
-
-# Unbreak history
-export HISTSIZE=100000
-export HISTFILE="$HOME/.history"
-export SAVEHIST=$HISTSIZE
-
-export EDITOR=vi
-set -o emacs
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\C-x\C-e' edit-command-line
-
-export WORDCHARS='*?[]~&;!$%^<>'
-
-export ACK_COLOR_MATCH='red'
-
 alias r=rails
 alias sr="screen -r"
 alias :q="You're not in Vim"
 alias :w="You're not in Vim"
 alias diff=colordiff
+alias todo="bundle exec todo"
 
-# Personal Commands
+# md5sum
+alias md5='md5 -r'
+alias md5sum='md5 -r'
+alias rncc='watchman watch-del-all && rm -rf node_modules && npm install && npm start -- --reset-cache'
 alias es='exec $SHELL'
 alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'
 alias be='bundle exec'
@@ -103,32 +100,26 @@ alias ngrok="/Applications/ngrok"
 
 alias agno="vim .antigen/repos/https-COLON--SLASH--SLAcd .antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/themes/"
 
-function gacp() {
-    gac $1 
-    gpo
-}
+#================================================================#
+#== END ALIASES
+#================================================================#
+# Unbreak broken, non-colored terminal
+export TERM='xterm-color'
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export GREP_OPTIONS="--color"
 
-function gach() {
-    gac $1 
-    gph
-}
+# Shell History
+export HISTSIZE=100000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
 
-if [ -f ~/.git-completion.zsh ]; then
-  . ~/.git-completion.zsh
-fi
+export EDITOR=vi
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+export WORDCHARS='*?[]~&;!$%^<>'
+export ACK_COLOR_MATCH='red'
 
-source "$HOME/dotfiles/.antigen/antigen.zsh"
-antigen bundle robbyrussell/oh-my-zsh lib/
-antigen bundle git
-antigen-theme https://gist.github.com/b13f9353014327743137 igolden
-antigen-apply
-
-#chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby 2.3.0
-#Hub Alias
-eval "$(hub alias -s)"
-alias todo="bundle exec todo"
 
 
 
