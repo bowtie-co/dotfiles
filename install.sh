@@ -52,6 +52,9 @@ echo "***** 2. Choose  Hack font, set to desired size         *****"
 echo "*************************************************************"
 
 
+#========================================================================================#
+# Copy Over Config
+#========================================================================================#
 echo "Copying .zshrc..."
 cp zshrc ../.zshrc
 echo "Copying .vimrc..."
@@ -61,15 +64,32 @@ cp -rf vim ../.vim
 echo "Copying .gitconfig.."
 cp gitconfig ../.gitconfig
 
+#========================================================================================#
+# Install Ruby Modules
+#========================================================================================#
+gem install bundler
+gem install rails
+gem install jekyll
+gem install mail catcher
+gem install dotenv
+
+#========================================================================================#
+# Install JS Modules
+#========================================================================================#
+npm install gulp -g
+npm install fixme -g
+npm install redux-cli -g
+npm install react-native-cli -g
+npm install browserify -g
+npm install watchify -g
+npm install webpack -g
 
 
 
 #========================================================================================#
 # TO DO LIST
 #========================================================================================#
-# CONFIG 
-# NPM MODULES
-# RUBY MODULES
+# DOWNLOAD DMGs
 # BOWTIE MODULES
 
 
