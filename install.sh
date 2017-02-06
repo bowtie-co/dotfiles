@@ -30,6 +30,14 @@ brew install imagemagick
 brew install ansible
 brew install wget
 brew install redis
+brew install mas                # Mac Apple Store utility. Can install/update programs
+
+mas install 497799835           # Install XCode
+mas install 405399194           # Install Kindle
+mas install 476533227           # Install Prepo for iOS icon creation
+mas install 425424353           # Install The Unarchiver for corrupted zips
+
+# Install ruby-2.3.0
 echo "" && echo "" && echo "" && echo ""
 echo "Installing ruby-2.3.0..... This will take a sec."
 echo "Go play some pong =====> http://www.ponggame.org/pong.swf"
