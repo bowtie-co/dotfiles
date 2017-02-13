@@ -37,6 +37,8 @@ mas install 405399194           # Install Kindle
 mas install 476533227           # Install Prepo for iOS icon creation
 mas install 425424353           # Install The Unarchiver for corrupted zips
 
+sudo xcodebuild -license accept
+
 # Install ruby-2.3.0
 echo "" && echo "" && echo "" && echo ""
 echo "Installing ruby-2.3.0..... This will take a sec."
