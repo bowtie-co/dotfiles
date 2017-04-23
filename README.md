@@ -1,4 +1,4 @@
-Bowtie Dotfiles
+SeedWorthy Dotfiles
 ===
 
-A boostrapped script to get a new Mac up and running with Bowtie's dotfiles.
+A boostrapped script to get a new Mac up and running with SeedWorhty's dotfiles.
